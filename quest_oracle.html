@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="smoke.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>The Quest Oracle</h1>
+  <p>QUEST: "APPLET OF MY EYE" (Code Level 7):  I need someone to take a values in a spreadsheet and make an applet that shows a wireframe representation of a display (size vieze) and has sliders and/or radiobuttons to show how the display changes under the conditions in the spreadsheet.</p>
+  <p>QUEST: "WIXWEB" (Code Level 5) (Art Level 6):  I need someone to setup a website on wix copying this one: https://www.compliantmechanisms.byu.edu/ </p>
+  <p>QUEST: "LUMINARY" (Code Level 4) (Fab Level: 5):  I need a student with an affinity of electromagnetics to learn lumerical and run simulations for me</p>
+  <p>QUEST: "Fellowship" Utah NASA Space Grant Consortium Fellowship
+
+Application deadline: May 29, 2020
+
+engineering.byu.edu/scholarships
+
+Open to graduate students and undergraduates! The BYU affiliate office for the Utah NASA Space Grant Consortium is now soliciting applications for student fellowships. This is an opportunity to get money for graduate students involved in space-related research with faculty members to receive additional money from NASA. The deadline for submission is 29 May 2020. The application can be found at https://engineering.byu.edu/scholarships under “Utah NASA Space Grant Consortium Fellowship.”</p>
+  
+  
+  
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
